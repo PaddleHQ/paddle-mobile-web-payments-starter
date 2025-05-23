@@ -1,17 +1,15 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface BlurProps {
+interface BackgroundBlurProps {
   className?: string;
-  width?: number | string;
-  height?: number | string;
 }
 
-export const Blur: React.FC<BlurProps> = ({ className = "", width = 1440, height = 591 }) => {
+export function BackgroundBlur({ className }: BackgroundBlurProps) {
   return (
     <svg
-      width={width}
-      height={height}
+      width="1440"
+      height="591"
       viewBox="0 0 1440 591"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -299,6 +297,4 @@ export const Blur: React.FC<BlurProps> = ({ className = "", width = 1440, height
       </defs>
     </svg>
   );
-};
-
-export default Blur;
+}
