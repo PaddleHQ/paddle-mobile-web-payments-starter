@@ -69,8 +69,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_142_1755"
@@ -80,8 +80,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_142_1755"
@@ -91,8 +91,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_142_1755"
@@ -102,8 +102,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_142_1755"
@@ -113,8 +113,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_142_1755"
@@ -124,8 +124,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_142_1755"
@@ -135,8 +135,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_142_1755"
@@ -146,8 +146,8 @@ function Branch({ className }: Props) {
           y2="80.1899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#CBE4FF" />
-          <stop offset="1" stopColor="#237FE3" />
+          <stop stopColor="var(--accent-foreground)" />
+          <stop offset="1" stopColor="var(--accent)" />
         </linearGradient>
       </defs>
     </svg>
