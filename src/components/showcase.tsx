@@ -1,5 +1,3 @@
-"use client";
-
 import { Wreath } from "@/components/wreath";
 import { Star, HalfStar } from "@/components/star";
 
