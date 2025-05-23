@@ -5,11 +5,9 @@ import { cn } from "@/lib/utils";
 import { ChevronDownIcon, ChevronUpIcon, MinusIcon } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
 
-export type PillProps = ComponentProps<typeof Badge> & {
-  themed?: boolean;
-};
+export type PillProps = ComponentProps<typeof Badge>;
 
-export const Pill = ({ variant = "default", themed = false, className, ...props }: PillProps) => (
+export const Pill = ({ variant = "default", className, ...props }: PillProps) => (
   <Badge variant={variant} className={cn("gap-2 rounded-full px-2.5 py-1 font-normal", className)} {...props} />
 );
 
