@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero";
+import { Quote } from "@/components/quote";
 import { Showcase } from "@/components/showcase";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Showcase />
+      <Quote />
     </>
   );
 }
