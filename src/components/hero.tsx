@@ -13,7 +13,7 @@ export function Hero() {
         <p className="max-w-lg text-center leading-6 tracking-tight sm:text-xl">
           Powerful, intuitive, and ready to make your life easier, start using Acme App today.
         </p>
-        <Button className="mb-10 w-fit rounded-full" size="lg">
+        <Button className="mb-10 w-fit" size="lg">
           Get Started
         </Button>
         <Image src="/app-image-1.png" alt="Hero" width={304} height={445} />

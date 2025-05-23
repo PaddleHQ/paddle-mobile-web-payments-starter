@@ -1,4 +1,5 @@
-import { MobileNav } from "./mobile-nav";
+import { MobileNav } from "@/components/mobile-nav";
+import { DesktopNav } from "@/components/desktop-nav";
 
 const navItems = [
   {
@@ -22,7 +23,8 @@ const navItems = [
 export function Nav() {
   return (
     <>
-      <MobileNav items={navItems} />
+      <MobileNav className="flex md:hidden" items={navItems} />
+      <DesktopNav className="hidden md:flex" items={navItems} />
     </>
   );
 }
