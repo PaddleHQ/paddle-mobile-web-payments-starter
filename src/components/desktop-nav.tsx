@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-type DesktopNavProps = {
+type Props = {
   items: {
     label: string;
     href: string;
@@ -17,7 +17,7 @@ type DesktopNavProps = {
   className?: string;
 };
 
-export function DesktopNav({ items, className }: DesktopNavProps) {
+export function DesktopNav({ items, className }: Props) {
   return (
     <nav className={cn("flex w-full max-w-7xl items-center justify-between gap-4", className)}>
       <Link href="/">

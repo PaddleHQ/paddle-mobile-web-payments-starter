@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-type MobileNavProps = {
+type Props = {
   items: {
     label: string;
     href: string;
@@ -12,7 +12,7 @@ type MobileNavProps = {
   className?: string;
 };
 
-export function MobileNav({ items, className }: MobileNavProps) {
+export function MobileNav({ items, className }: Props) {
   return (
     <nav className={cn("flex w-full max-w-7xl items-center justify-between gap-4", className)}>
       <Link href="/">

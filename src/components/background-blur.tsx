@@ -1,11 +1,11 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface BackgroundBlurProps {
+type Props = {
   className?: string;
-}
+};
 
-export function BackgroundBlur({ className }: BackgroundBlurProps) {
+export function BackgroundBlur({ className }: Props) {
   return (
     <svg
       width="1440"
