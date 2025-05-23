@@ -8,7 +8,7 @@ export function Showcase() {
   const isMobile = useIsMobile();
 
   return (
-    <div className="relative mx-auto my-14 grid w-fit grid-cols-3 gap-8 md:my-24 md:gap-20">
+    <div className="relative mx-auto mt-12 mb-8 grid w-fit grid-cols-3 gap-8 md:my-24 md:gap-20">
       <Wreath>
         <p className="mb-0.5 text-[10px] md:text-base">Rating</p>
         <Rating value={4.5} readOnly>
