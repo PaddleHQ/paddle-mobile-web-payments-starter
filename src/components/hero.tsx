@@ -1,7 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Button } from "@/components/ui/button";
+import { Pill, PillAvatar, PillAvatarGroup } from "@/components/ui/pill";
 import Image from "next/image";
-import { Pill, PillAvatarGroup, PillAvatar, PillDivider } from "@/components/ui/pill";
 
 export function Hero() {
   return (

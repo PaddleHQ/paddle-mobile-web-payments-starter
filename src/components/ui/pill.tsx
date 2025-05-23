@@ -35,14 +35,6 @@ export const PillButton = ({ className, ...props }: PillButtonProps) => (
   />
 );
 
-export type PillDividerProps = {
-  className?: string;
-};
-
-export const PillDivider = ({ className }: PillDividerProps) => (
-  <div className={cn("bg-border flex h-full w-px", className)} />
-);
-
 export type PillStatusProps = {
   children: ReactNode;
   className?: string;
