@@ -2,10 +2,12 @@ import { Nav } from "@/components/nav";
 import { Button } from "@/components/ui/button";
 import { Pill, PillAvatar, PillAvatarGroup } from "@/components/ui/pill";
 import Image from "next/image";
+import { Blur } from "@/components/blur";
 
 export function Hero() {
   return (
     <div className="z-1 grid w-full place-items-center p-8">
+      <Blur className="-top-40 md:-top-0" />
       <Nav />
       <div className="mt-16 flex flex-col items-center gap-6">
         <Pill>

@@ -24,7 +24,7 @@ export function DesktopNav({ items, className }: DesktopNavProps) {
         <Image src="/logo.svg" alt="logo" width={86} height={26} />
       </Link>
       <NavigationMenu>
-        <NavigationMenuList className="gap-10">
+        <NavigationMenuList className="gap-8">
           {items.map((item) => (
             <NavigationMenuItem key={item.href}>
               <NavigationMenuLink href={item.href}>{item.label}</NavigationMenuLink>
