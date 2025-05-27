@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type Props = {
@@ -5,13 +6,20 @@ type Props = {
   title: string;
   description: string;
   image: string;
-  active?: boolean;
+  isActive?: boolean;
 };
 
-export function Feature({ icon, title, description, image }: Props) {
+export function Feature({ icon, title, description, image, isActive }: Props) {
   return (
-    <div className="flex w-[240px] flex-col items-center gap-5 px-2 py-6">
-      <div className="bg-foreground text-background w-fit rounded-lg p-4">{icon}</div>
+    <div className="flex w-[var(--carousel-item-width)] flex-col items-center gap-5 px-2 py-6">
+      <div
+        className={cn(
+          "bg-secondary text-foreground w-fit rounded-lg p-4 transition-colors",
+          isActive && "bg-foreground text-background",
+        )}
+      >
+        {icon}
+      </div>
       <div className="text-center">
         <p className="mb-2 font-bold">{title}</p>
         <p className="text-muted-foreground text-sm">{description}</p>
