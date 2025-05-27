@@ -12,7 +12,7 @@ export function Quote() {
       <figcaption className="mt-10">
         <span className="block font-semibold tracking-tight md:text-xl">Daniel Rees</span>
         <span className="text-muted-foreground mt-1 block text-xs tracking-tighter md:text-xl">
-          VP of Operations · Flowly
+          VP of Operations · Acme Inc.
         </span>
       </figcaption>
     </figure>
