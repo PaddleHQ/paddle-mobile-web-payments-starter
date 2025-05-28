@@ -15,29 +15,28 @@ const testimonials = [
     name: "Giana Herwitz",
     date: "May 4",
     title: "Title will be here",
-    content: "Acme helped us launch our mobile app in days—not weeks. The customization options are top-notch.",
+    content: `"Acme helped us launch our mobile app in days—not weeks. The customization options are top-notch."`,
     rating: 5,
   },
   {
     name: "Hanna Gouse",
     date: "May 4",
     title: "Title will be here",
-    content:
-      "When I signed up with Acme it was a no-brainer. It's been one of the best decisions I've made to ensure my finances are on point.",
+    content: `"When I signed up with Acme it was a no-brainer. It's been one of the best decisions I've made to ensure my finances are on point."`,
     rating: 5,
   },
   {
     name: "Kaiya Donin",
     date: "May 4",
     title: "Title will be here",
-    content: "I love how easy it is to manage everything from the dashboard. Acme keeps it simple but powerful.",
+    content: `"I love how easy it is to manage everything from the dashboard. Acme keeps it simple but powerful."`,
     rating: 5,
   },
   {
     name: "Alex Bergwijn",
     date: "May 4",
     title: "Title will be here",
-    content: "Acme made our brand shine—our app looks and feels like it was built just for us.",
+    content: `"Acme made our brand shine—our app looks and feels like it was built just for us."`,
     rating: 5,
   },
 ] satisfies Testimonial[];
