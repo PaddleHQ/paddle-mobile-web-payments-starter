@@ -1,17 +1,12 @@
 "use client";
 
-import { Feature } from "@/components/feature";
+import { FeatureCard, type Feature } from "@/components/feature-card";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 type Props = {
-  features: {
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-    image: string;
-  }[];
+  features: Feature[];
   className?: string;
 };
 
@@ -43,7 +38,7 @@ export function FeaturesCarousel({ features, className }: Props) {
               className="basis-[var(--carousel-item-width)] [--carousel-item-width:240px]"
               onClick={() => api?.scrollTo(index)}
             >
-              <Feature isActive={current === index + 1} {...feature} />
+              <FeatureCard isActive={current === index + 1} {...feature} />
             </CarouselItem>
           ))}
         </CarouselContent>
