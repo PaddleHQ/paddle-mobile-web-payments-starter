@@ -54,7 +54,7 @@ export function Testimonials() {
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
         We&apos;ve built the ultimate white-label app platform so you can focus on growing your brand—not building tech
       </p>
-      <div className="relative -ml-8 w-[calc(100%+4rem)] overflow-x-hidden py-4 lg:w-full">
+      <div className="relative w-[calc(100%+4rem)] overflow-x-hidden py-4 lg:w-full">
         <TestimonialMarquee testimonials={testimonials} className="mb-4" />
         <TestimonialMarquee testimonials={testimonials} reverse />
       </div>

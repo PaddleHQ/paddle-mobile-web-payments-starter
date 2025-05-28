@@ -3,7 +3,7 @@ import { Star } from "@/components/star";
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="flex h-auto w-[340px] flex-col gap-2 rounded-xl border bg-white p-6">
+    <div className="flex h-auto w-[340px] flex-col gap-2 rounded-xl bg-white p-6 shadow-md">
       <div className="mb-1 text-lg font-semibold">{testimonial.title}</div>
       <div className="mb-2 flex items-center gap-px">
         {[...Array(testimonial.rating)].map((_, i) => (
