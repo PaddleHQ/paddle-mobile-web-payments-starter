@@ -12,33 +12,33 @@ type Props = {
 };
 
 export function FeaturesCarousel({ features, className }: Props) {
-  const [api, setApi] = useState<CarouselApi>();
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [, setCount] = useState(0);
 
   useEffect(() => {
-    if (!api) {
+    if (!carouselApi) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    setCount(carouselApi.scrollSnapList().length);
+    setCurrent(carouselApi.selectedScrollSnap() + 1);
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
+    carouselApi.on("select", () => {
+      setCurrent(carouselApi.selectedScrollSnap() + 1);
     });
-  }, [api]);
+  }, [carouselApi]);
 
   return (
     <div className={cn("w-[calc(100%+4rem)]", className)}>
-      <Carousel setApi={setApi}>
+      <Carousel setApi={setCarouselApi}>
         <CarouselContent>
           {features.map((feature, index) => (
             <CarouselItem
               key={feature.title}
               className="basis-[var(--carousel-item-width)] [--carousel-item-width:240px]"
               onClick={() => {
-                api?.scrollTo(index);
+                carouselApi?.scrollTo(index);
                 setCurrent(index + 1);
               }}
             >
