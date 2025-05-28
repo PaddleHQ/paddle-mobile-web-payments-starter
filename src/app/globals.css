@@ -124,3 +124,24 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0px,
+    rgba(0, 0, 0, 0.2) 12px,
+    rgb(0, 0, 0) 100px,
+    rgb(0, 0, 0) calc(100% - 100px),
+    rgba(0, 0, 0, 0.2) calc(100% - 12px),
+    transparent
+  );
+}

@@ -2,6 +2,7 @@ import { Features } from "@/components/features/features";
 import { Hero } from "@/components/hero";
 import { Quote } from "@/components/quote";
 import { Showcase } from "@/components/showcase";
+import { Testimonials } from "@/components/testimonials/testimonials";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Showcase />
       <Quote />
       <Features />
+      <Testimonials />
     </>
   );
 }
