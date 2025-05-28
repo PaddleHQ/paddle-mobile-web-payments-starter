@@ -44,7 +44,7 @@ export function Features() {
         Features
       </Badge>
       <h2 className="text-center text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
-        Discover our<span className="text-foreground/40 block">exceptional features</span>
+        Discover our<div className="text-foreground/40">exceptional features</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
         We&apos;ve built the ultimate white-label app platform so you can focus on growing your brand - not building

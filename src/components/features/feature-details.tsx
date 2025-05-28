@@ -1,17 +1,20 @@
 import type { Feature } from "@/components/features/features";
 import { cn } from "@/lib/utils";
 
-type FeatureDetailsProps = Omit<Feature, "image"> & {
-  isActive?: boolean;
+type FeatureDetailsProps = {
+  feature: Feature;
+  isActive: boolean;
 };
 
-export function FeatureDetails({ icon, title, description, isActive }: FeatureDetailsProps) {
+export function FeatureDetails({ feature, isActive }: FeatureDetailsProps) {
+  const { icon, title, description } = feature;
+
   return (
     <>
       <div
         className={cn(
-          "w-fit rounded-sm bg-[var(--icon-bg)] p-3 text-[var(--icon-text)] transition-colors",
-          isActive && "[--icon-bg:var(--foreground)] [--icon-text:var(--background)]",
+          "bg-secondary text-foreground w-fit rounded-sm p-3 transition-colors",
+          isActive && "bg-foreground text-background",
         )}
       >
         {icon}

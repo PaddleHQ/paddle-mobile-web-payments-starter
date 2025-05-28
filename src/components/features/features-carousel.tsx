@@ -14,14 +14,12 @@ type Props = {
 export function FeaturesCarousel({ features, className }: Props) {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [, setCount] = useState(0);
 
   useEffect(() => {
     if (!carouselApi) {
       return;
     }
 
-    setCount(carouselApi.scrollSnapList().length);
     setCurrent(carouselApi.selectedScrollSnap() + 1);
 
     carouselApi.on("select", () => {
@@ -42,7 +40,7 @@ export function FeaturesCarousel({ features, className }: Props) {
                 setCurrent(index + 1);
               }}
             >
-              <FeatureCard isActive={current === index + 1} {...feature} />
+              <FeatureCard feature={feature} isActive={current === index + 1} />
             </CarouselItem>
           ))}
         </CarouselContent>

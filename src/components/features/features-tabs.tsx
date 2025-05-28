@@ -5,6 +5,7 @@ import type { Feature } from "@/components/features/features";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 type Props = {
   features: Feature[];
@@ -12,8 +13,10 @@ type Props = {
 };
 
 export function FeaturesTabs({ features, className }: Props) {
+  const [activeTab, setActiveTab] = useState(features[0].title);
+
   return (
-    <Tabs className={cn("w-full max-w-6xl", className)} defaultValue={features[0].title}>
+    <Tabs className={cn("w-full max-w-6xl", className)} value={activeTab} onValueChange={setActiveTab}>
       <TabsList className="grid h-auto w-full grid-cols-4 gap-6">
         {features.map((feature) => (
           <TabsTrigger
@@ -21,7 +24,7 @@ export function FeaturesTabs({ features, className }: Props) {
             value={feature.title}
             className="flex cursor-pointer flex-col items-center justify-start gap-5 px-2 py-6"
           >
-            <FeatureDetails {...feature} />
+            <FeatureDetails feature={feature} isActive={activeTab === feature.title} />
           </TabsTrigger>
         ))}
       </TabsList>
