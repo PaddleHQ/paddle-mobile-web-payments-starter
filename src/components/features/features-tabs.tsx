@@ -1,6 +1,7 @@
 "use client";
 
-import { FeatureDetails, type Feature } from "@/components/feature-card";
+import { FeatureDetails } from "@/components/features/feature-details";
+import type { Feature } from "@/components/features/features";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

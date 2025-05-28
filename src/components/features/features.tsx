@@ -1,7 +1,14 @@
-import { FeaturesCarousel } from "@/components/features-carousel";
-import { FeaturesTabs } from "@/components/features-tabs";
+import { FeaturesCarousel } from "@/components/features/features-carousel";
+import { FeaturesTabs } from "@/components/features/features-tabs";
 import { Badge } from "@/components/ui/badge";
 import { ActivityIcon, ChartNoAxesColumnIcon, SlidersIcon, ZapIcon } from "lucide-react";
+
+export type Feature = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  image: string;
+};
 
 const features = [
   {
@@ -28,7 +35,7 @@ const features = [
     description: "Monitor activity and performance with live data.",
     image: "/app-image-1.png",
   },
-];
+] satisfies Feature[];
 
 export function Features() {
   return (
