@@ -49,10 +49,10 @@ export function Testimonials() {
         Testimonial
       </Badge>
       <h2 className="text-center text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
-        Don't Take<div className="text-foreground/40">Our Word for It</div>
+        Don&apos;t Take<div className="text-foreground/40">Our Word for It</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
-        We've built the ultimate white-label app platform so you can focus on growing your brand—not building tech
+        We&apos;ve built the ultimate white-label app platform so you can focus on growing your brand—not building tech
       </p>
       <div className="relative -ml-8 w-[calc(100%+4rem)] overflow-x-hidden py-4 lg:w-full">
         <TestimonialMarquee testimonials={testimonials} className="mb-4" />
