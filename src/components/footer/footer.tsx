@@ -90,7 +90,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden py-12 md:py-25">
+    <footer className="relative -mt-25 overflow-hidden py-12 pt-37 md:py-25 md:pt-37">
       <FooterBlur />
       <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-6 tracking-tight md:grid-cols-4">
         {links.map((link) => (

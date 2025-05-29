@@ -14,7 +14,7 @@ export function FooterBlur({ className }: Props) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn(
-        "text-accent pointer-events-none absolute top-0 left-0 -z-10 h-full w-full md:-top-[80%] md:-left-1/2 md:h-[200%] md:w-[200%]",
+        "text-accent pointer-events-none absolute top-0 left-0 -z-10 h-full w-full md:-top-[65%] md:-left-1/2 md:h-[200%] md:w-[200%]",
         className,
       )}
     >
