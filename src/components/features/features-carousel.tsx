@@ -28,7 +28,7 @@ export function FeaturesCarousel({ features, className }: Props) {
   }, [carouselApi]);
 
   return (
-    <div className={cn("w-[calc(100%+3rem)]", className)}>
+    <div className={cn("w-[calc(100%+3rem)] md:w-[calc(100%+5rem)]", className)}>
       <Carousel setApi={setCarouselApi}>
         <CarouselContent>
           {features.map((feature, index) => (

@@ -4,7 +4,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 
 export function FAQs() {
   return (
-    <div className="mx-auto grid max-w-6xl gap-6 px-6 py-14 md:py-25 lg:grid-cols-2 lg:gap-14">
+    <div className="mx-auto grid max-w-6xl gap-6 px-6 py-14 md:grid-cols-2 md:gap-14 md:px-10 md:py-25">
       <div className="flex w-full flex-col gap-6">
         <Badge variant="secondary" className="mb-2 uppercase">
           FAQ

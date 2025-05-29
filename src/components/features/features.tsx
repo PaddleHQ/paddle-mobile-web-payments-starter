@@ -39,7 +39,7 @@ const features = [
 
 export function Features() {
   return (
-    <div className="flex w-full flex-col items-center gap-6 px-6 py-14 md:py-25">
+    <div className="flex w-full flex-col items-center gap-6 px-6 py-14 md:px-10 md:py-25">
       <Badge variant="secondary" className="uppercase">
         Features
       </Badge>
