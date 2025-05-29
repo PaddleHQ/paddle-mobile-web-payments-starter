@@ -76,7 +76,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden py-12 md:py-25">
       <FooterBlur />
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-6 tracking-tight md:grid-cols-4">
         {links.map((link) => (
           <div key={link.title} className="mb-10 text-center">
             <h3 className="text-muted-foreground mb-8">{link.title}</h3>
