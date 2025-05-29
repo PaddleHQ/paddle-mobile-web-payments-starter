@@ -1,5 +1,6 @@
 import { FAQs } from "@/components/faqs/faqs";
 import { Features } from "@/components/features/features";
+import { Footer } from "@/components/footer/footer";
 import { Hero } from "@/components/hero/hero";
 import { Quote } from "@/components/quote/quote";
 import { Showcase } from "@/components/showcase/showcase";
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <Testimonials />
       <FAQs />
+      <Footer />
     </>
   );
 }
