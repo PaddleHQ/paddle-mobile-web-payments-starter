@@ -1,8 +1,8 @@
-import { FAQs } from "@/components/faqs";
+import { FAQs } from "@/components/faqs/faqs";
 import { Features } from "@/components/features/features";
-import { Hero } from "@/components/hero";
-import { Quote } from "@/components/quote";
-import { Showcase } from "@/components/showcase";
+import { Hero } from "@/components/hero/hero";
+import { Quote } from "@/components/quote/quote";
+import { Showcase } from "@/components/showcase/showcase";
 import { Testimonials } from "@/components/testimonials/testimonials";
 
 export default function Home() {

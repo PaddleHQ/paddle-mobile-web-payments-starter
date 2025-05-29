@@ -1,5 +1,5 @@
-import { MobileNav } from "@/components/mobile-nav";
-import { DesktopNav } from "@/components/desktop-nav";
+import { MobileNav } from "@/components/hero/mobile-nav";
+import { DesktopNav } from "@/components/hero/desktop-nav";
 
 const navItems = [
   {

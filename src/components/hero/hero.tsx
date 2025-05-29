@@ -1,8 +1,8 @@
-import { Nav } from "@/components/nav";
+import { Nav } from "@/components/hero/nav";
 import { Button } from "@/components/ui/button";
 import { Pill, PillAvatar, PillAvatarGroup } from "@/components/ui/pill";
 import Image from "next/image";
-import { BackgroundBlur } from "@/components/background-blur";
+import { BackgroundBlur } from "@/components/ui/background-blur";
 
 export function Hero() {
   return (
