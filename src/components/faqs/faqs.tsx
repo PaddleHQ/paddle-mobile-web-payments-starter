@@ -12,7 +12,7 @@ export function FAQs() {
         <h2 className="text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
           Frequently
           <br />
-          Asked <span className="text-foreground/40">Questions</span>
+          Asked <span className="text-muted-foreground">Questions</span>
         </h2>
         <p className="max-w-lg text-xs leading-6 tracking-tight sm:text-base">
           Get answers to commonly asked questions.

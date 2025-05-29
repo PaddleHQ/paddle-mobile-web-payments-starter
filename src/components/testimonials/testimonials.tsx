@@ -48,7 +48,7 @@ export function Testimonials() {
         Testimonial
       </Badge>
       <h2 className="text-center text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
-        Don&apos;t Take<div className="text-foreground/40">Our Word for It</div>
+        Don&apos;t Take<div className="text-muted-foreground">Our Word for It</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
         We&apos;ve built the ultimate white-label app platform so you can focus on growing your brand—not building tech
