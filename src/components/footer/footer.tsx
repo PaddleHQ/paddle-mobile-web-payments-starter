@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { FooterBlur } from "@/components/footer/footer-blur";
-import { BackgroundBlur } from "../ui/background-blur";
+import Link from "next/link";
 
 const links = [
   {
