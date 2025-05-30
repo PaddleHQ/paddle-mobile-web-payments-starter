@@ -1,96 +1,96 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { ZapIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Choicebox,
   ChoiceboxItem,
   ChoiceboxItemContent,
-  ChoiceboxItemDescription,
   ChoiceboxItemHeader,
   ChoiceboxItemIndicator,
   ChoiceboxItemSubtitle,
   ChoiceboxItemTitle,
 } from "@/components/ui/choicebox";
-import Link from "next/link";
+import { CheckIcon } from "lucide-react";
 
 const plans = [
   {
-    id: "yearly",
-    label: "1-year VPN",
+    id: "annual",
+    label: "Annual",
     price: "$49.99",
     oldPrice: "$99.99",
-    perMonth: "$4.17",
-    save: "Save 70%",
-    description: "For the first year",
-    duration: "year",
+    save: "Save 50%",
+    description: "$49.99 first year. Automatically renews at $99.99 per year",
   },
   {
     id: "monthly",
-    label: "1-month VPN",
-    perMonth: "$13.99",
-    duration: "month",
+    label: "Monthly",
+    price: "$4.99",
+    oldPrice: "$9.99",
+    description: "$4.99 first month. Automatically renews at $9.99 per month",
   },
 ];
 
+const features = [
+  "Block scam texts with smart AI",
+  "Remove your info from sites selling it",
+  "Browse online securely with VPN",
+  "Monitor your identity with timely alerts",
+];
+
 export function PlanSelect() {
-  const [selected, setSelected] = useState("yearly");
+  const [selected, setSelected] = useState("annual");
 
   return (
-    <div className="mx-auto mt-20 flex h-full min-h-[calc(100vh-11rem)] w-full max-w-2xl flex-col justify-start">
-      <div className="mb-8 flex flex-col items-center">
-        <div className="mb-4">
-          <Badge className="gap-2 rounded-full px-2 py-1">
-            <ZapIcon className="bg-accent text-background fill-background rounded-full p-0.5" />
-            Checkout
-          </Badge>
-        </div>
-        <h1 className="mb-3 text-center text-3xl font-medium tracking-tight md:mb-5 md:text-5xl">
-          Select your protection plan
-        </h1>
-      </div>
-      <Choicebox className="space-y-4" value={selected} onValueChange={setSelected}>
+    <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center">
+      <h1 className="mt-8 mb-4 text-center text-3xl font-bold md:text-4xl">Unlock Scam Protection, VPN, and more</h1>
+      <ul className="mx-auto mt-4 mb-8 w-full max-w-xs space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="text-foreground/60 flex items-center text-base">
+            <div className="bg-success mr-2 grid place-items-center rounded-full p-0.5">
+              <CheckIcon className="size-4 p-0.5 text-white" />
+            </div>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <Choicebox
+        className="mb-6 grid w-full grid-cols-2 justify-center gap-4"
+        value={selected}
+        onValueChange={setSelected}
+      >
         {plans.map((plan) => (
-          <ChoiceboxItem value={plan.id} key={plan.id} className="relative mb-0 flex items-center">
+          <ChoiceboxItem
+            value={plan.id}
+            key={plan.id}
+            className="bg-card relative flex flex-col items-center rounded-lg px-8 py-6"
+          >
             {plan.save && (
-              <div className="bg-accent text-card absolute top-1 right-1 rounded-full px-2 py-1 text-xs">
+              <span className="bg-accent border-accent-foreground absolute -top-4 left-0 rounded-full border-2 px-2 py-1 text-xs font-semibold text-white md:left-1/2 md:-translate-x-1/2">
                 {plan.save}
-                <div className="border-accent-foreground absolute -top-0.5 -left-0.5 h-[calc(100%+0.25rem)] w-[calc(100%+0.25rem)] rounded-full border"></div>
-              </div>
+              </span>
             )}
+            <ChoiceboxItemHeader className="w-full text-center">
+              <ChoiceboxItemTitle>{plan.label}</ChoiceboxItemTitle>
+              <ChoiceboxItemSubtitle className="text-base">{plan.price}</ChoiceboxItemSubtitle>
+              <span className="text-muted-foreground text-xs line-through">{plan.oldPrice}</span>
+            </ChoiceboxItemHeader>
             <ChoiceboxItemContent>
               <ChoiceboxItemIndicator />
             </ChoiceboxItemContent>
-            <ChoiceboxItemHeader className="gap-0">
-              <ChoiceboxItemTitle>{plan.label}</ChoiceboxItemTitle>
-              {plan.price && (
-                <ChoiceboxItemSubtitle className="text-foreground flex items-center gap-2 text-base">
-                  {plan.price}{" "}
-                  {plan.oldPrice && <span className="text-muted-foreground text-xs line-through">{plan.oldPrice}</span>}
-                </ChoiceboxItemSubtitle>
-              )}
-              <ChoiceboxItemDescription>{plan.description}</ChoiceboxItemDescription>
-            </ChoiceboxItemHeader>
-            <div>
-              <p className="text-foreground text-base font-medium">
-                {plan.perMonth} <span className="text-muted-foreground text-xs">/month</span>
-              </p>
-            </div>
           </ChoiceboxItem>
         ))}
       </Choicebox>
-      <div className="mt-auto flex flex-col items-center pt-10 md:mt-0">
-        <div className="text-muted-foreground mb-4 text-center text-sm md:text-lg">
-          Subscription renews every {plans.find((plan) => plan.id === selected)?.duration} until canceled.
-        </div>
-        <Button className="w-full" size="lg">
-          Start your subscription
-        </Button>
-        <Link href="/terms-and-conditions" className="text-muted-foreground mt-4 w-fit text-sm md:text-lg">
-          Subscription and Privacy Info
-        </Link>
+      <div className="text-muted-foreground mb-6 text-center text-base">
+        {plans.find((p) => p.id === selected)?.description}
+      </div>
+      <Button className="mb-8 w-full" size="lg">
+        Start Free Trial
+      </Button>
+      <div className="text-muted-foreground flex justify-center gap-8 text-sm underline">
+        <a href="#">Restore</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
       </div>
     </div>
   );

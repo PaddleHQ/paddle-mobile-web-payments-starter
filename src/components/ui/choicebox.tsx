@@ -46,13 +46,13 @@ export const ChoiceboxItemHeader = ({ className, ...props }: ComponentProps<type
 export type ChoiceboxItemTitleProps = ComponentProps<typeof CardTitle>;
 
 export const ChoiceboxItemTitle = ({ className, ...props }: ChoiceboxItemTitleProps) => (
-  <CardTitle className={cn("flex items-center gap-2 text-base font-medium", className)} {...props} />
+  <CardTitle className={cn("inline-block text-base font-medium", className)} {...props} />
 );
 
 export type ChoiceboxItemSubtitleProps = HTMLAttributes<HTMLSpanElement>;
 
 export const ChoiceboxItemSubtitle = ({ className, ...props }: ChoiceboxItemSubtitleProps) => (
-  <span className={cn("text-muted-foreground text-xs font-normal", className)} {...props} />
+  <span className={cn("text-xs font-normal", className)} {...props} />
 );
 
 export type ChoiceboxItemDescriptionProps = ComponentProps<typeof CardDescription>;
@@ -66,7 +66,7 @@ export type ChoiceboxItemContentProps = ComponentProps<typeof CardContent>;
 export const ChoiceboxItemContent = ({ className, ...props }: ChoiceboxItemContentProps) => (
   <CardContent
     className={cn(
-      "border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:ring-destructive/40 flex aspect-square size-4 shrink-0 items-center justify-center rounded-full border p-0 shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+      "border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:ring-destructive/40 flex aspect-square size-5 shrink-0 items-center justify-center rounded-full border p-0 shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
       className,
     )}
     {...props}
@@ -77,8 +77,8 @@ export type ChoiceboxItemIndicatorProps = ComponentProps<typeof RadioGroupIndica
 
 export const ChoiceboxItemIndicator = ({ className, ...props }: ChoiceboxItemIndicatorProps) => (
   <RadioGroupIndicator asChild {...props}>
-    <div className="bg-accent grid place-items-center rounded-full p-1">
-      <CheckIcon className={cn("text-card size-2", className)} />
+    <div className="bg-accent grid place-items-center rounded-full p-[2px]">
+      <CheckIcon className={cn("text-card size-4", className)} />
     </div>
   </RadioGroupIndicator>
 );
