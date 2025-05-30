@@ -19,7 +19,7 @@ type Props = {
 
 export function DesktopNav({ items, className }: Props) {
   return (
-    <nav className={cn("flex w-full max-w-7xl items-center justify-between gap-4", className)}>
+    <nav className={cn("mx-auto flex w-full max-w-7xl items-center justify-between gap-4", className)}>
       <Link href="/">
         <Image src="/logo.svg" alt="logo" width={86} height={26} />
       </Link>
