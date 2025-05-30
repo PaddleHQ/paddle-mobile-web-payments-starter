@@ -8,7 +8,7 @@ const navItems = [
   },
   {
     label: "Pricing",
-    href: "#pricing",
+    href: "/pricing",
   },
   {
     label: "About",
