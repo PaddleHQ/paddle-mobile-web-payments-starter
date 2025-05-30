@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { RadioGroup } from "@/components/ui/radio-group";
 import { cn } from "@/lib/utils";
 import { RadioGroupIndicator, RadioGroupItem, type RadioGroupItemProps } from "@radix-ui/react-radio-group";
-import { CheckIcon, CircleIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import type { ComponentProps, HTMLAttributes } from "react";
 
 export type ChoiceboxProps = ComponentProps<typeof RadioGroup>;
