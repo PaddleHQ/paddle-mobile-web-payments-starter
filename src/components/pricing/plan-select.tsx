@@ -23,7 +23,7 @@ const plans = [
     price: "$49.99",
     oldPrice: "$99.99",
     perMonth: "$4.17",
-    save: "Save 96%",
+    save: "Save 70%",
     description: "For the first year",
     duration: "year",
   },
@@ -50,9 +50,6 @@ export function PlanSelect() {
         <h1 className="mb-3 text-center text-3xl font-medium tracking-tight md:mb-5 md:text-5xl">
           Select your protection plan
         </h1>
-        <p className="text-muted-foreground text-center text-sm md:text-base">
-          No commitment. You can cancel anytime in your Apple account
-        </p>
       </div>
       <Choicebox className="space-y-4" value={selected} onValueChange={setSelected}>
         {plans.map((plan) => (
@@ -89,7 +86,7 @@ export function PlanSelect() {
           Subscription renews every {plans.find((plan) => plan.id === selected)?.duration} until canceled.
         </div>
         <Button className="w-full" size="lg">
-          Start Free Trial
+          Start your subscription
         </Button>
         <Link href="/terms-and-conditions" className="text-muted-foreground mt-4 w-fit text-sm md:text-lg">
           Subscription and Privacy Info
