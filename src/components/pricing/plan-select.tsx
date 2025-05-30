@@ -43,8 +43,8 @@ export function PlanSelect() {
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center">
-      <h1 className="mt-8 mb-4 text-center text-3xl font-bold md:text-4xl">Unlock Scam Protection, VPN, and more</h1>
-      <ul className="mx-auto mt-4 mb-8 w-full max-w-xs space-y-3">
+      <h1 className="mt-8 mb-4 text-3xl font-bold md:text-center md:text-4xl">Unlock Scam Protection, VPN, and more</h1>
+      <ul className="mt-4 mb-8 w-full space-y-3 md:mx-auto md:max-w-xs">
         {features.map((feature, index) => (
           <li key={index} className="text-foreground/60 flex items-center text-base">
             <div className="bg-success mr-2 grid place-items-center rounded-full p-0.5">
