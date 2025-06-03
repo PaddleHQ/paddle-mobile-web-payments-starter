@@ -32,6 +32,7 @@ export function Checkout(props: Props) {
           )}
         </div>
       </div>
+
       <div className="mx-auto w-full max-w-[min(647px,100vw)] lg:order-1 lg:px-4 lg:pt-10">
         {checkoutData && (
           <h2 className="hidden px-3 py-6 text-2xl leading-none font-semibold lg:block">Payment details</h2>
