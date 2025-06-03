@@ -40,7 +40,7 @@ const features = [
 ];
 
 export function PlanSelect() {
-  const [selectedPriceId, setSelectedPriceId] = useState("pri_xxx");
+  const [selectedPriceId, setSelectedPriceId] = useState(plans[0].priceId);
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center">

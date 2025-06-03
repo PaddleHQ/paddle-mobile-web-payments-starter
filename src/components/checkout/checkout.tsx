@@ -3,7 +3,7 @@
 import { ProductDetails } from "@/components/checkout/product-details";
 import { ProductDetailsSkeleton } from "@/components/checkout/product-details-skeleton";
 import { CheckoutQueryParams } from "@/lib/types";
-import { usePaddle } from "@/lib/usePaddle";
+import { usePaddle } from "@/hooks/use-paddle";
 import { Environments } from "@paddle/paddle-js";
 
 type Props = {
