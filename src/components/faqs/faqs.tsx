@@ -1,6 +1,32 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
+
+function AccordionItemFAQs(props: React.ComponentProps<typeof AccordionItem>) {
+  return (
+    <AccordionItem
+      {...props}
+      className={cn(
+        "bg-secondary/30 data-[state=open]:bg-card data-[state=open]:border-border rounded-lg border border-transparent px-5 py-2 transition-colors data-[state=open]:shadow-sm lg:px-7",
+        props.className,
+      )}
+    />
+  );
+}
+
+function AccordionTriggerFAQs(props: React.ComponentProps<typeof AccordionTrigger>) {
+  return (
+    <AccordionTrigger
+      {...props}
+      className={cn("[&[data-state=open]>svg]:text-foreground text-base lg:text-lg", props.className)}
+    />
+  );
+}
+
+function AccordionContentFAQs(props: React.ComponentProps<typeof AccordionContent>) {
+  return <AccordionContent {...props} className={cn("text-muted-foreground lg:text-base", props.className)} />;
+}
 
 export function FAQs() {
   return (
@@ -21,36 +47,36 @@ export function FAQs() {
           Get Started
         </Button>
       </div>
-      <Accordion type="single" collapsible defaultValue="branding" className="w-full">
-        <AccordionItem value="branding">
-          <AccordionTrigger>Will my app show your branding anywhere?</AccordionTrigger>
-          <AccordionContent>
+      <Accordion type="single" collapsible defaultValue="branding" className="w-full gap-4">
+        <AccordionItemFAQs value="branding">
+          <AccordionTriggerFAQs>Will my app show your branding anywhere?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
             <p>
               Never. Your app will be fully white-labeled with your own name, logo, and design. We stay completely
               invisible.
             </p>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="skills">
-          <AccordionTrigger>Do I need technical skills to use Acme?</AccordionTrigger>
-          <AccordionContent>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
+        <AccordionItemFAQs value="skills">
+          <AccordionTriggerFAQs>Do I need technical skills to use Acme?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
             <p>
               No. We handle all the technical setup for you. You can focus on your business while we handle the rest.
             </p>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="devices">
-          <AccordionTrigger>Will my app work on all devices?</AccordionTrigger>
-          <AccordionContent>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
+        <AccordionItemFAQs value="devices">
+          <AccordionTriggerFAQs>Will my app work on all devices?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
             <p>Yes. Our app is designed to work on all devices, including iOS and Android.</p>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="notifcations">
-          <AccordionTrigger>Can I send notifications and updates to users?</AccordionTrigger>
-          <AccordionContent>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
+        <AccordionItemFAQs value="notifcations">
+          <AccordionTriggerFAQs>Can I send notifications and updates to users?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
             <p>Yes. You can send notifications and updates to users through our app.</p>
-          </AccordionContent>
-        </AccordionItem>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
       </Accordion>
     </div>
   );
