@@ -47,7 +47,7 @@ export function FAQs() {
           Get Started
         </Button>
       </div>
-      <Accordion type="single" collapsible defaultValue="branding" className="w-full gap-4">
+      <Accordion type="single" collapsible defaultValue="branding" className="grid w-full gap-4">
         <AccordionItemFAQs value="branding">
           <AccordionTriggerFAQs>Will my app show your branding anywhere?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
