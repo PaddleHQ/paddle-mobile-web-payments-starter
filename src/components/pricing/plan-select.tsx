@@ -12,10 +12,11 @@ import {
   ChoiceboxItemTitle,
 } from "@/components/ui/choicebox";
 import { CheckIcon } from "lucide-react";
+import Link from "next/link";
 
 const plans = [
   {
-    id: "annual",
+    priceId: "pri_12345678901234567890123456",
     label: "Annual",
     price: "$49.99",
     oldPrice: "$99.99",
@@ -23,7 +24,7 @@ const plans = [
     description: "$49.99 first year. Automatically renews at $99.99 per year",
   },
   {
-    id: "monthly",
+    priceId: "pri_23456789012345678901234567",
     label: "Monthly",
     price: "$4.99",
     oldPrice: "$9.99",
@@ -39,7 +40,7 @@ const features = [
 ];
 
 export function PlanSelect() {
-  const [selected, setSelected] = useState("annual");
+  const [selectedPriceId, setSelectedPriceId] = useState("pri_xxx");
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center">
@@ -56,13 +57,13 @@ export function PlanSelect() {
       </ul>
       <Choicebox
         className="mb-6 grid w-full grid-cols-2 justify-center gap-4"
-        value={selected}
-        onValueChange={setSelected}
+        value={selectedPriceId}
+        onValueChange={setSelectedPriceId}
       >
         {plans.map((plan) => (
           <ChoiceboxItem
-            value={plan.id}
-            key={plan.id}
+            value={plan.priceId}
+            key={plan.priceId}
             className="bg-card relative flex flex-col items-center rounded-lg px-8 py-6"
           >
             {plan.save && (
@@ -82,10 +83,10 @@ export function PlanSelect() {
         ))}
       </Choicebox>
       <div className="text-muted-foreground mb-6 text-center text-base">
-        {plans.find((p) => p.id === selected)?.description}
+        {plans.find((p) => p.priceId === selectedPriceId)?.description}
       </div>
       <Button className="mb-8 w-full" size="lg">
-        Start Free Trial
+        <Link href={`/checkout?price_id=${selectedPriceId}`}>Start Free Trial</Link>
       </Button>
       <div className="text-muted-foreground flex justify-center gap-8 text-sm underline">
         <a href="#">Restore</a>
