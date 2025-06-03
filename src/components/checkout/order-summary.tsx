@@ -76,6 +76,7 @@ export function OrderSummary(props: Props) {
                 <p className="text-muted-foreground">Tax</p>
                 <p>{formatCurrency(checkoutData.totals.tax, currencyCode)}</p>
               </div>
+
               <Separator className="my-1 w-full" />
               <div className="flex justify-between">
                 <p className="text-muted-foreground">Total</p>
