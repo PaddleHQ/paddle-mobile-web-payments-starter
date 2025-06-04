@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const plans = [
   {
-    priceId: "pri_12345678901234567890123456",
+    priceId: "pri_01jvwbaezh6hvwvwsg8k0c1stk",
     label: "Annual",
     price: "$49.99",
     oldPrice: "$99.99",
@@ -24,7 +24,7 @@ const plans = [
     description: "$49.99 first year. Automatically renews at $99.99 per year",
   },
   {
-    priceId: "pri_23456789012345678901234567",
+    priceId: "pri_01jvpk517ysv0vq4k4p0dbv43p",
     label: "Monthly",
     price: "$4.99",
     oldPrice: "$9.99",
