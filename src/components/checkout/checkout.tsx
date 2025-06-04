@@ -22,7 +22,7 @@ export function Checkout(props: Props) {
   });
 
   return (
-    <div className={`bg-card mx-auto grid min-h-screen p-0 px-2 lg:h-screen lg:w-full lg:grid-cols-[1fr_1fr] lg:p-0`}>
+    <div className={`bg-card mx-auto grid min-h-screen p-0 px-2 lg:h-full lg:w-full lg:grid-cols-[1fr_1fr] lg:p-0`}>
       <div className="lg:bg-background flex w-full justify-center lg:order-2 lg:h-full">
         <div className={`w-full max-w-[min(647px,100vw)] pt-6 lg:px-8 lg:pt-16`}>
           {checkoutData ? (
