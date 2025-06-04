@@ -82,7 +82,7 @@ export function usePaddle(args: UsePaddleArgs) {
             frameTarget: "paddle-checkout-frame",
             frameInitialHeight: 450,
             frameStyle: "width: 100%; background-color: transparent; border: none",
-            ...(locale && { locale }),
+            locale: locale ?? "en",
           },
         },
       }).then(async (paddle) => {
