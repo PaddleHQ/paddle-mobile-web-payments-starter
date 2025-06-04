@@ -12,7 +12,9 @@ export default async function CheckoutPage({ searchParams }: Props) {
   const environment = process.env.NEXT_PUBLIC_PADDLE_ENV as Environments;
 
   if (!clientToken || !redirectUrl || !environment) {
-    return <div className="grid place-items-center p-8 text-xl">Missing required environment variables</div>;
+    return (
+      <div className="grid place-items-center p-8 text-xl">Missing required environment variables {redirectUrl}.</div>
+    );
   }
 
   const {
