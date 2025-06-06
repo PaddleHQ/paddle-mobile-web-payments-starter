@@ -33,21 +33,6 @@ This starter project provides a fully functional implementation of a Paddle chec
 - TypeScript
 - Tailwind CSS
 
-## 🗂 Folder layout
-
-- `src` Main application code
-  - `app` Next.js app directory
-    - `pricing` Pricing page components
-    - `checkout` Paddle checkout
-    - `page.tsx` Main landing page
-  - `components` React components
-    - `checkout` Checkout components
-    - `pricing` Pricing components
-    - `ui` UI components
-  - `hooks` Custom React hooks
-    - `use-paddle.tsx` Paddle integration logic
-    - `use-paddle-prices.tsx` Price fetching logic
-
 ## 🏁 Getting started
 
 ### Development
