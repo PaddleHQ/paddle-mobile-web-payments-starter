@@ -14,15 +14,13 @@ import { type Price, usePaddlePrices } from "@/hooks/use-paddle-prices";
 
 export const plans = [
   {
-    priceId: "pri_01j8qhbqh4d8wgahx8h89pvjf9",
+    priceId: "pri_01hsxyeb2bmrg618bzwcwvdd6q",
     label: "Annual",
-    tag: "Save 50%",
-    description: "$49.99 first year. Automatically renews at $99.99 per year",
+    tag: "Save 17%",
   },
   {
-    priceId: "pri_01j8qhas32vz8n1vt52x8pqkxx",
+    priceId: "pri_01hsxycme6m95sejkz7sbz5e9g",
     label: "Monthly",
-    description: "$4.99 first month. Automatically renews at $9.99 per month",
   },
 ];
 
