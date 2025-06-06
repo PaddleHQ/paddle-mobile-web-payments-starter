@@ -1,5 +1,3 @@
-"use client";
-
 import type { CheckoutQueryParams } from "@/lib/types";
 import { CheckoutOpenLineItem, initializePaddle, type Environments, type Paddle, type Theme } from "@paddle/paddle-js";
 import type { CheckoutEventsData } from "@paddle/paddle-js/types/checkout/events";
