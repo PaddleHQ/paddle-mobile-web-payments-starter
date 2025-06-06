@@ -15,12 +15,10 @@ import { type Price, usePaddlePrices } from "@/hooks/use-paddle-prices";
 export const plans = [
   {
     priceId: "pri_01hsxyeb2bmrg618bzwcwvdd6q",
-    label: "Annual",
     tag: "Save 17%",
   },
   {
     priceId: "pri_01hsxycme6m95sejkz7sbz5e9g",
-    label: "Monthly",
   },
 ];
 
@@ -63,7 +61,7 @@ export function PlanSelect({ value, onChange }: Props) {
               </span>
             )}
             <ChoiceboxItemHeader className="w-full text-center">
-              <ChoiceboxItemTitle>{plan.label}</ChoiceboxItemTitle>
+              <ChoiceboxItemTitle>{prices[plan.priceId].name}</ChoiceboxItemTitle>
               <ChoiceboxItemSubtitle className="text-base">{prices[plan.priceId].total}</ChoiceboxItemSubtitle>
             </ChoiceboxItemHeader>
             <ChoiceboxItemContent>

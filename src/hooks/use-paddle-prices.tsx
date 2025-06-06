@@ -9,7 +9,7 @@ import {
 } from "@paddle/paddle-js";
 import { useEffect, useState } from "react";
 
-export type Price = { total: string; interval?: string };
+export type Price = { name: string; total: string; interval?: string };
 export type PaddlePrices = Record<string, Price>;
 
 type Plan = {
@@ -26,6 +26,7 @@ function getLineItems(plans: Plan[]): PricePreviewParams["items"] {
 function getPriceAmounts(prices: PricePreviewResponse) {
   return prices.data.details.lineItems.reduce((acc, item) => {
     acc[item.price.id] = {
+      name: item.price.name ?? "",
       total: item.formattedTotals.total,
       interval: item.price.billingCycle?.interval,
     };
