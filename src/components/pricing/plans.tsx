@@ -30,8 +30,8 @@ export function Plans() {
         ))}
       </ul>
       <PlanSelect value={selectedPriceId} onChange={setSelectedPriceId} />
-      <Button className="mb-8 w-full" size="lg">
-        <Link href={`/checkout?price_id=${selectedPriceId}`}>Start Free Trial</Link>
+      <Button className="mb-8 w-full" size="lg" asChild>
+        <Link href={`/checkout?price_id=${selectedPriceId}`}>Checkout</Link>
       </Button>
       <div className="text-muted-foreground flex justify-center gap-8 text-sm underline">
         <a href="#">Restore</a>

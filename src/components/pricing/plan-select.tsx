@@ -14,11 +14,11 @@ import { type Price, usePaddlePrices } from "@/hooks/use-paddle-prices";
 
 export const plans = [
   {
-    priceId: "pri_01hsxyeb2bmrg618bzwcwvdd6q",
+    priceId: "pri_01jx2rwhdtm4b5f3aj1ds3b0s4",
     tag: "Save 17%",
   },
   {
-    priceId: "pri_01hsxycme6m95sejkz7sbz5e9g",
+    priceId: "pri_01jx2rx1t30hxejpb5v0vav4nv",
   },
 ];
 
