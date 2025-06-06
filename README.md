@@ -1,6 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paddle Mobile Web Payments Starter
 
-## Getting Started
+[Paddle Billing](https://www.paddle.com/solutions/web-stores?utm_source=dx&utm_medium=paddle-in-app-checkout-starter) is the developer-first merchant of record. We take care of payments, tax, subscriptions, and metrics with one unified API that does it all.
+
+This is a Next.js starter project for implementing a landing page, paywall and Paddle checkout on Web for an iOS app.
+
+As of April 30, 2025, Apple's updated App Store rules allow app developers to use third-party payment processors like Paddle for in-app purchases. This starter shows you how to implement a web-based checkout that can be opened from iOS apps.
+
+Even though you're redirecting users to Web to complete their purchase, **Apple pay is still supported**.
+
+## ⚡️ Instantly clone & deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPaddleHQ%2Fpaddle-mobile-web-payments-starter&env=APPLE_TEAM_ID,NEXT_PUBLIC_BUNDLE_IDENTIFIER,NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,NEXT_PUBLIC_PADDLE_ENV)
+
+## 🔦 About
+
+This starter project provides a fully functional implementation of a Paddle checkout within a Next.js application that can be easily embedded into iOS apps.
+
+## ✨ Features
+
+- Global tax compliance — As a merchant of record, Paddle handles all tax calculations, collections, and remittances so you don't have to.
+- Chargeback protection — Paddle manages chargebacks, combats fraud, and prevents card attacks, keeping your business secure.
+- Lower fees than IAPs — Connect directly with your users to reduce fees while increasing customer lifetime value.
+- Integrated with Paddle Retain — Minimize churn and maximize revenue with our comprehensive suite of retention tools.
+- Buyer support included — Customers can self-serve through our portal, while Paddle handles all order inquiries.
+- All-in-one payment platform — Enable new payment methods instantly without additional code or merchant accounts.
+
+## 📦 Included packages
+
+- Next.js 15
+- `@paddle/paddle-js` for launching a checkout
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## 🗂 Folder layout
+
+- `src` Main application code
+  - `app` Next.js app directory
+    - `pricing` Pricing page components
+    - `checkout` Paddle checkout
+    - `page.tsx` Main landing page
+  - `components` React components
+    - `checkout` Checkout components
+    - `pricing` Pricing components
+    - `ui` UI components
+  - `hooks` Custom React hooks
+    - `use-paddle.tsx` Paddle integration logic
+    - `use-paddle-prices.tsx` Price fetching logic
+
+## 🏁 Getting started
+
+### Development
 
 First, run the development server:
 
@@ -14,23 +64,16 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the checkout page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file based on `.env.example` with the following variables:
 
-## Learn More
+- `APPLE_TEAM_ID` - Your Apple Team ID (for Universal Links)
+- `NEXT_PUBLIC_BUNDLE_IDENTIFIER` - Your iOS app's bundle identifier
+- `NEXT_PUBLIC_APP_REDIRECT_URL` - The redirect url back to your app
+- `NEXT_PUBLIC_PADDLE_CLIENT_TOKEN` - Your Paddle client token
+- `NEXT_PUBLIC_PADDLE_ENV` - Paddle environment (`sandbox` or `production`)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For more detailed setup instructions, check out [Paddle's documentation on opening a checkout from iOS apps](https://developer.paddle.com/build/launch-ios-app-checkout).
