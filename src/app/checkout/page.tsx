@@ -2,6 +2,13 @@ import { Checkout } from "@/components/checkout/checkout";
 import { CheckoutQueryParams, SnakeCaseCheckoutQueryParams } from "@/lib/types";
 import { Environments } from "@paddle/paddle-js";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Checkout - Paddle Web Payments Starter",
+  description: "Complete your purchase securely",
+};
+
 type Props = {
   searchParams: Promise<SnakeCaseCheckoutQueryParams>;
 };
