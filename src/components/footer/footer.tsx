@@ -9,14 +9,17 @@ const links = [
       {
         label: "Download App",
         href: "https://apps.apple.com/",
+        title: "Download the app from the App Store",
       },
       {
         label: "Features",
         href: "/#features",
+        title: "See our features",
       },
       {
         label: "Pricing",
         href: "/pricing",
+        title: "View pricing",
       },
     ],
   },
@@ -26,10 +29,12 @@ const links = [
       {
         label: "For Android",
         href: "https://play.google.com/store",
+        title: "Download on Android",
       },
       {
         label: "For iPhone",
         href: "https://apps.apple.com/",
+        title: "Download on iOS",
       },
     ],
   },
@@ -39,14 +44,17 @@ const links = [
       {
         label: "Terms & Conditions",
         href: "/terms-and-conditions",
+        title: "Read our Terms & Conditions",
       },
       {
         label: "Privacy Policy",
         href: "/privacy-policy",
+        title: "Read our Privacy Policy",
       },
       {
         label: "Refund Policy",
         href: "/refund-policy",
+        title: "Read our Refund Policy",
       },
     ],
   },
@@ -61,6 +69,7 @@ const links = [
           </div>
         ),
         href: "https://x.com/",
+        title: "Follow us on Twitter",
       },
       {
         label: (
@@ -70,6 +79,7 @@ const links = [
           </div>
         ),
         href: "https://www.linkedin.com/",
+        title: "Connect with us on LinkedIn",
       },
       {
         label: (
@@ -79,6 +89,7 @@ const links = [
           </div>
         ),
         href: "https://github.com/",
+        title: "View our GitHub repository",
       },
     ],
   },
@@ -95,7 +106,11 @@ export function Footer() {
             <ul className="flex flex-col items-center gap-8">
               {link.links.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} target={link.href.startsWith("https://") ? "_blank" : undefined}>
+                  <Link
+                    href={link.href}
+                    title={link.title}
+                    target={link.href.startsWith("https://") ? "_blank" : undefined}
+                  >
                     {link.label}
                   </Link>
                 </li>
