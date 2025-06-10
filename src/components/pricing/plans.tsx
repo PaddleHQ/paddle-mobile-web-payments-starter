@@ -34,9 +34,9 @@ export function Plans() {
         <Link href={`/checkout?price_id=${selectedPriceId}`}>Checkout</Link>
       </Button>
       <div className="text-muted-foreground flex justify-center gap-8 text-sm underline">
-        <a href="#">Restore</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href="/terms-and-conditions">Terms and Conditions</Link>
+        <Link href="/refund-policy">Refund Policy</Link>
       </div>
     </div>
   );
