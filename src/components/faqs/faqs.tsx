@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 function AccordionItemFAQs(props: React.ComponentProps<typeof AccordionItem>) {
   return (
@@ -43,8 +44,8 @@ export function FAQs() {
         <p className="max-w-lg text-xs leading-6 tracking-tight sm:text-base">
           Get answers to commonly asked questions.
         </p>
-        <Button className="w-fit" size="lg">
-          Get Started
+        <Button className="w-fit" size="lg" asChild>
+          <Link href="/pricing">Get Started</Link>
         </Button>
       </div>
       <Accordion type="single" collapsible defaultValue="branding" className="grid w-full gap-4">

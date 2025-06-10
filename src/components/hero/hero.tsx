@@ -1,8 +1,9 @@
 import { Nav } from "@/components/hero/nav";
+import { BackgroundBlur } from "@/components/ui/background-blur";
 import { Button } from "@/components/ui/button";
 import { Pill, PillAvatar, PillAvatarGroup } from "@/components/ui/pill";
 import Image from "next/image";
-import { BackgroundBlur } from "@/components/ui/background-blur";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -27,8 +28,8 @@ export function Hero() {
         <p className="max-w-lg text-center leading-6 tracking-tight sm:text-xl">
           Powerful, intuitive, and ready to make your life easier, start using Acme App today.
         </p>
-        <Button className="mb-10 w-fit" size="lg">
-          Get Started
+        <Button className="mb-10 w-fit" size="lg" asChild>
+          <Link href="/pricing">Get Started</Link>
         </Button>
         <Image src="/app-image-1.png" alt="Hero" width={304} height={445} />
       </div>

@@ -8,19 +8,15 @@ const links = [
     links: [
       {
         label: "Download App",
-        href: "#",
+        href: "https://apps.apple.com/",
       },
       {
         label: "Features",
-        href: "#",
-      },
-      {
-        label: "Updates",
-        href: "#",
+        href: "/#features",
       },
       {
         label: "Pricing",
-        href: "#",
+        href: "/pricing",
       },
     ],
   },
@@ -29,11 +25,11 @@ const links = [
     links: [
       {
         label: "For Android",
-        href: "#",
+        href: "https://play.google.com/store",
       },
       {
         label: "For iPhone",
-        href: "#",
+        href: "https://apps.apple.com/",
       },
     ],
   },
@@ -42,15 +38,15 @@ const links = [
     links: [
       {
         label: "Terms & Conditions",
-        href: "#",
+        href: "/terms-and-conditions",
       },
       {
         label: "Privacy Policy",
-        href: "#",
+        href: "/privacy-policy",
       },
       {
         label: "Refund Policy",
-        href: "#",
+        href: "/refund-policy",
       },
     ],
   },
@@ -64,7 +60,7 @@ const links = [
             <span>Twitter</span>
           </div>
         ),
-        href: "#",
+        href: "https://x.com/",
       },
       {
         label: (
@@ -73,7 +69,7 @@ const links = [
             <span>LinkedIn</span>
           </div>
         ),
-        href: "#",
+        href: "https://www.linkedin.com/",
       },
       {
         label: (
@@ -82,7 +78,7 @@ const links = [
             <span>Github</span>
           </div>
         ),
-        href: "#",
+        href: "https://github.com/",
       },
     ],
   },
@@ -99,7 +95,9 @@ export function Footer() {
             <ul className="flex flex-col items-center gap-8">
               {link.links.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={link.href} target={link.href.startsWith("https://") ? "_blank" : undefined}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -32,7 +32,9 @@ export function DesktopNav({ items, className }: Props) {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <Button>Get Started</Button>
+      <Button asChild>
+        <Link href="/pricing">Get Started</Link>
+      </Button>
     </nav>
   );
 }
