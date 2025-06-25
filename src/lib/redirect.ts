@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import { toast } from "sonner";
 
@@ -19,10 +21,12 @@ export function useRedirectWarning() {
     const redirectUrl = process.env.NEXT_PUBLIC_APP_REDIRECT_URL;
 
     if (!isLocalhost && !redirectUrl) {
-      toast.warning(
-        "NEXT_PUBLIC_APP_REDIRECT_URL is not set. Please set it in your environment variables for proper app redirects.",
-        { duration: 10000 },
-      );
+      setTimeout(() => {
+        toast.warning(
+          "NEXT_PUBLIC_APP_REDIRECT_URL is not set. Please set it in your environment variables for proper app redirects.",
+          { duration: 10000 },
+        );
+      }, 1000);
     }
   }, []);
 }
